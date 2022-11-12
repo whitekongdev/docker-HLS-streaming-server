@@ -72,6 +72,11 @@ usr/local/nginx/sbin/nginx -g 'daemon off;'
         - Stream Key: $STREAM_KEY (Can Be Anything)
 - Start Streaming
 
+## Stream from terminal (FFMEPG)
+ ```bash
+ ffmpeg -re -i ./videos/sample_960x400_ocean_with_audio.mp4 -c:v libx264 -c:a libmp3lame -ar 44100 -ac 1 -f flv rtmp://localhost:1935/stream/test
+ ```
+ 
 ## Watch HLS Stream
 
 [Safari](https://www.apple.com/safari/), [WatchVideobyLink](https://github.com/MohamedBakoush/WatchVideoByLink), [VLC](https://www.videolan.org/vlc/), [HLS player](https://github.com/videojs/http-streaming):
